@@ -1,6 +1,6 @@
 # Link del Repositorio
 
-https://github.com/junx21/Jun_PropuestaInformatica
+https://github.com/junx21/Jun_PropuestaPrg
 
 # Enunciados 
 
@@ -21,3 +21,36 @@ Estructura sugerida para tu programa:
 3. Dentro del segundo bucle, calcula el tercer lado del triángulo (c) usando la fórmula c = sqrt(a^2 + b^2).
 4. Verifica si los tres lados forman un triple pitagórico y si cumplen las condiciones de un triángulo (la suma de cualquier par de lados es mayor que el tercer lado).
 5. Si se cumple, imprime el triple pitagórico.
+
+# Implementación del Programa
+```cpp
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    const int max = 20; // Puedes ajustar este valor según sea necesario
+    int a, b, c;
+    int count = 0;
+
+    printf("Triples pitagóricos hasta %d:\n", max);
+    printf("%5s%5s%5s\n", "a", "b", "c");
+    printf("---------------\n");
+
+    for (a = 1; a <= max; a++) { // Primer bucle
+        for (b = a; b <= max; b++) { // Segundo bucle
+            int c_squared = a * a + b * b;
+            c = (int)sqrt((double)c_squared);
+            
+            // Verificar si c es un entero y dentro del rango
+            if (c <= max && c * c == c_squared) {
+                printf("%5d%5d%5d\n", a, b, c);
+                count++;
+            }
+        }
+    }
+
+    printf("\nSe encontraron %d triples pitagóricos.\n", count);
+
+    return 0;
+}
+```
