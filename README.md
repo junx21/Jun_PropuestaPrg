@@ -1,6 +1,6 @@
 # Link del Repositorio
 
-https://github.com/junx21/Jun_PropuestaInformatica
+https://github.com/junx21/Jun_PropuestaPrg
 
 # Enunciados 
 
